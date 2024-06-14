@@ -9,12 +9,27 @@ d<!DOCTYPE html>
     
     <style>
       h1,h2,figure {text-align: center;}
+      .skip-to-main-content-link {
+        position: absolute;
+        left: -9999px;
+        z-index: 999;
+        padding: 1em;
+        background-color: black;
+        color: white;
+        opacity: 0;
+       }
+       .skip-to-main-content-link:focus {
+         left: 50%;
+         transform: translateX(-50%);
+         opacity: 1;
+        }
     </style>
     
     <script src="https://www.w3schools.com/lib/w3.js"></script>
   </head>
   <body>
-    <header class="w3-container w3-sand">    
+    <header class="w3-container w3-sand">
+      <a href="#main" class="skip-to-main-content-link">Skip to main content</a>
       <h1 class="w3-pale-red">Website Under Construction</h1>
     
       <figure class="w3-col s12 m12 l5 w3-mobile">
@@ -23,7 +38,7 @@ d<!DOCTYPE html>
       </figure> 
     </header>
     
-    <article id="home" class="w3-content w3-row-padding w3-pale-yellow">
+    <article id="main" class="w3-content w3-row-padding w3-pale-yellow">
       <section class="w3-col s12 m5 l3 w3-mobile w3-card w3-pale-green">
         <h2>Contact</h2>
         <address>
